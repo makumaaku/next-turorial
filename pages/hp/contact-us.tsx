@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
 
-export default function Post({
+export default function CoutactUsPage({
     postData
   }: {
     postData: {
@@ -13,9 +13,9 @@ export default function Post({
     return (
       <Layout>
         <Head>
-          <title>ホームページのトップ</title>
+          <title>お問い合わせ</title>
         </Head>
-        <h1>HP練習</h1>
+        <h1>お問い合わせページ</h1>
       </Layout>
     )
   }
