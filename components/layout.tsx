@@ -32,12 +32,17 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={styles.headerTop}>
-        <p className={styles.headerTopTitle}> ファーストアップ</p>
+        <Link href="/">
+          <a>
+            <p className={styles.headerTopTitle}> ファーストアップ</p>
+          </a>
+        </Link>
+
         <div className={styles.headerTopItems}>
-        <p className={styles.headerTopItem}> アイテム１</p>
-        <p className={styles.headerTopItem}> アイテム2</p>
+          <p className={styles.headerTopItem}> アイテム１</p>
+          <p className={styles.headerTopItem}> アイテム2</p>
         </div>
-       
+
       </div>
       <header className={styles.headerBottom}>
         {home ? (
