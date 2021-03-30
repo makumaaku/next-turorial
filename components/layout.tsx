@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '[Your Name]'
+const name = 'ページの名前'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({
@@ -31,15 +31,23 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <div className={styles.headerTop}>
+        <p className={styles.headerTopTitle}> ファーストアップ</p>
+        <div className={styles.headerTopItems}>
+        <p className={styles.headerTopItem}> アイテム１</p>
+        <p className={styles.headerTopItem}> アイテム2</p>
+        </div>
+       
+      </div>
+      <header className={styles.headerBottom}>
         {home ? (
           <>
             <Image
               priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              src="/images/img_home.png"
+              // className={utilStyles.borderCircle}
+              height={600}
+              width={1600}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
