@@ -65,41 +65,21 @@ export default function Layout({
 
       </div>
       <header className={styles.headerBottom}>
-        {home ? (
+        {home && (
           <>
             <Image
               priority
               src="/images/img_home.png"
-              // className={utilStyles.borderCircle}
               height={600}
               width={1600}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
         )}
       </header>
       <main>{children}</main>
+      {/* footer */}
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
