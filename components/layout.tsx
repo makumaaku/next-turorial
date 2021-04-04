@@ -41,15 +41,26 @@ export default function Layout({
         <div className={styles.headerTopItems}>
           <Link href="/hp/app-list">
             <a>
-              <p className={styles.headerTopItem}> アプリ一覧</p>
+              <p className={styles.headerTopItem}> 制作アプリ一覧</p>
             </a>
           </Link>
-
+          <Link href="/hp/profile">
+            <a>
+              <p className={styles.headerTopItem}> プロフィール</p>
+            </a>
+          </Link>
+          <Link href="/hp/blog">
+            <a>
+              <p className={styles.headerTopItem}>ブログ</p>
+            </a>
+          </Link>
           <Link href="/hp/contact-us">
             <a>
               <p className={styles.headerTopItem}> お問い合わせ</p>
             </a>
           </Link>
+
+
         </div>
 
       </div>

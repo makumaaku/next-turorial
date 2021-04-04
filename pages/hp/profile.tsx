@@ -6,9 +6,9 @@ export default function AppListPage(
     return (
         <Layout>
             <Head>
-                <title>制作アプリ一覧</title>
+                <title>プロフィール</title>
             </Head>
-            <h1>アプリ一覧</h1>
+            <h1>プロフィール書いていくよ</h1>
         </Layout>
     )
 }
