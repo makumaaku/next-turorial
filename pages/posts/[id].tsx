@@ -1,6 +1,7 @@
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
+import Image from 'next/image'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
@@ -11,6 +12,7 @@ export default function Post({
   postData: {
     title: string
     date: string
+    imageUrl: string
     contentHtml: string
   }
 }) {
@@ -21,6 +23,12 @@ export default function Post({
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <Image
+          priority
+          src={postData.imageUrl}
+          height={150}
+          width={250}
+        />
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>

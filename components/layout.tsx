@@ -44,12 +44,7 @@ export default function Layout({
               <p className={styles.headerTopItem}> 制作アプリ一覧</p>
             </a>
           </Link>
-          <Link href="/hp/profile">
-            <a>
-              <p className={styles.headerTopItem}> プロフィール</p>
-            </a>
-          </Link>
-          <Link href="/hp/blog">
+          <Link href="/posts/">
             <a>
               <p className={styles.headerTopItem}>ブログ</p>
             </a>
