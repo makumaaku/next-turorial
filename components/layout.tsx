@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '[Your Name]'
+const name = 'ページの名前'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({
@@ -31,42 +31,50 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
+      <div className={styles.headerTop}>
+        <Link href="/">
+          <a>
+            <p className={styles.headerTopTitle}> ファーストアップ</p>
+          </a>
+        </Link>
+
+        <div className={styles.headerTopItems}>
+          <Link href="/hp/app-list">
+            <a>
+              <p className={styles.headerTopItem}> 制作アプリ一覧</p>
+            </a>
+          </Link>
+          <Link href="/posts/">
+            <a>
+              <p className={styles.headerTopItem}>ブログ</p>
+            </a>
+          </Link>
+          <Link href="/hp/contact-us">
+            <a>
+              <p className={styles.headerTopItem}> お問い合わせ</p>
+            </a>
+          </Link>
+
+
+        </div>
+
+      </div>
+      <header className={styles.headerBottom}>
+        {home && (
           <>
             <Image
               priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              src="/images/img_home.png"
+              height={600}
+              width={1600}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
         )}
       </header>
       <main>{children}</main>
+      {/* footer */}
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
