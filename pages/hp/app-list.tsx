@@ -11,7 +11,7 @@ export default function AppListPage(
             <Head>
                 <title>制作アプリ一覧</title>
             </Head>
-            <div>
+            <div className={styles.container}>
                 <h1>アプリ一覧</h1>
                 <li className={styles.appCardList}>
                 <AppCard imageUrl={"/app_icons/ic_body_records.webp"} linkUrl={"https://apps.apple.com/us/app/bodyrecords/id1511365313?itscg=30200&amp;itsct=apps_box"} appName={"BodyRecords"} />
