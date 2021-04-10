@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Footer from '../components/organizms/footer'
 
 const name = 'ページの名前'
 export const siteTitle = 'Next.js Sample Website'
@@ -54,8 +55,6 @@ export default function Layout({
               <p className={styles.headerTopItem}> お問い合わせ</p>
             </a>
           </Link>
-
-
         </div>
 
       </div>
@@ -74,14 +73,7 @@ export default function Layout({
         )}
       </header>
       <main>{children}</main>
-      {/* footer */}
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <Footer />
     </div>
   )
 }
