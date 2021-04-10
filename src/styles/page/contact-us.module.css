@@ -1,5 +1,93 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 640px) {
+  .inputForm {
+    width: 80vh;
+    padding: 10px;
+    font-size: 16px;
   }
+
+  .textArea {
+    height: 200px;
+    width: 80vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px){
+  .inputForm {
+    width: 70vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .textArea {
+    height: 200px;
+    width: 70vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .inputForm {
+    width: 60vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .textArea {
+    height: 200px;
+    width: 60vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .inputForm {
+    width: 50vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .textArea {
+    height: 200px;
+    width: 50vh;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formAndTitle{
+  padding-bottom: 20px;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.inputForm:focus {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  outline: 0px;
+  border-radius: 2px; 
+}
+
+.textArea:focus {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  outline: 0px;
+  border-radius: 2px; 
+  border: solid 2px black;;
+}
+

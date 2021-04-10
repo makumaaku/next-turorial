@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../../components/layout'
-import utilStyles from '../../styles/utils.module.css'
-import { getSortedPostsData } from '../../lib/posts'
-import Link from 'next/link'
-import Image from 'next/image'
-import Date from '../../components/date'
-import BlogCard from '../../components/organizms/blog-card'
+import Layout, { siteTitle } from '../../src/components/layout'
+import utilStyles from '../../src/styles/utils.module.css'
+import { getSortedPostsData } from '../../src/lib/posts'
+import BlogCard from '../../src/components/organizms/blog-card'
 import { GetStaticProps } from 'next'
 
 export default function Home({

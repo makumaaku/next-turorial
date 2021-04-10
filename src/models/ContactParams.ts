@@ -1,5 +1,6 @@
 export interface ContactParams {
-    name: string;
-    email: string;
-    message: string;
-  }
+  name: string;
+  company: string;
+  email: string;
+  message: string;
+}
