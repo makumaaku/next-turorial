@@ -72,7 +72,7 @@ export default function Layout({
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className={styles.children}>{children}</main>
       <Footer />
     </div>
   )
