@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Layout from '../../components/layout'
-import styles from '../../styles/page/contact-us.module.css'
-import {ContactParams} from '../../models/ContactParams'
-import {useFormState } from '../../state/contact/useFormState'
-import {useSendContactForm } from '../../state/contact/useSendContactForm'
+import Layout from '../../src/components/layout'
+import styles from '../../src/styles/page/contact-us.module.css'
+import {ContactParams} from '../../src/models/ContactParams'
+import {useFormState } from '../../src/state/contact/useFormState'
+import {useSendContactForm } from '../../src/state/contact/useSendContactForm'
 
 
 

@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../../components/layout'
-import Date from '../../components/date'
+import Layout from '../../src/components/layout'
+import Date from '../../src/components/date'
 import utilStyles from '../../styles/utils.module.css'
 import styles from '../../styles/page/blog.module.css'
 import { GetStaticProps } from 'next'
-import { getSortedPostsData } from '../../lib/posts'
+import { getSortedPostsData } from '../../src/lib/posts'
 
 export default function Blog({ allPostsData }: {
     allPostsData: {

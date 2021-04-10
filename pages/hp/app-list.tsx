@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
-import Layout from '../../components/layout'
-import styles from '../../styles/page/app-list.module.css'
-import AppCard from '../../components/organizms/app_card'
+import Layout from '../../src/components/layout'
+import styles from '../../src/styles/page/app-list.module.css'
+import AppCard from '../../src/components/organizms/app_card'
 
 export default function AppListPage(
 ) {
