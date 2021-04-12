@@ -5,7 +5,7 @@ import { getSortedPostsData } from '../../src/lib/posts'
 import BlogCard from '../../src/components/organizms/blog-card'
 import { GetStaticProps } from 'next'
 
-export default function Home({
+export default function Blog({
   allPostsData
 }: {
   allPostsData: {

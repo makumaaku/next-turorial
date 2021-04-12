@@ -1,9 +1,5 @@
-.container {
-  width: 100%;
-}
-
 .headerTop {
-  width: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,10 +27,6 @@
   color: white;
 }
 
-.headerBottom {
-  width: 100%;
-  background-color: red;
-}
 
 /* min-heightを指定して、Footerが一番下にくるように */
 .children{
