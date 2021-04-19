@@ -35,13 +35,13 @@ export default function Layout({
       <header>
         {home && (
           <>
-            <Image
+            {/* <Image
               priority
               src="/images/img_home.png"
               height={600}
               width={1600}
               alt={'トップページの画像'}
-            />
+            /> */}
           </>
         )}
       </header>
