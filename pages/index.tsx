@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../src/components/layout'
 import utilStyles from '../src/styles/utils.module.css'
+import styles from '../src/styles/page/top.module.css'
 import { getSortedPostsData } from '../src/lib/posts'
 import { GetStaticProps } from 'next'
 import AppCard from '../src/components/organizms/app_card'
@@ -19,7 +20,10 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div>
+      <div className = {styles.body}>
+
+     
+      <div >
         <h2 className={utilStyles.headingLg}>アプリ一覧</h2>
         <ul className={utilStyles.list}>
           {AppList.map(({ name, imageUrl, linkUrl }) => (
@@ -30,7 +34,6 @@ export default function Home({
         </ul>
       </div>
       <div>
-
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, imageUrl }) => (
@@ -40,6 +43,7 @@ export default function Home({
           ))}
         </ul>
 
+      </div>
       </div>
       <div>
         <p>

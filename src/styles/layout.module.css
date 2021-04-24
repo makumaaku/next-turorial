@@ -1,8 +1,42 @@
+/* Small (sm) */
+@media (max-width: 640px) {
+  .headerTopItems {
+    display: none;
+  }
+  .headerMenu {
+    display: block;
+    height: 36px;
+    width: 36px;
+    margin-right: 16px;
+    background-color: black;
+    border-color: black;
+  }
+
+  .headerMenu :focus{
+    outline: none;
+    display: none;
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 640px)  {
+  .headerTopItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .headerMenu {
+    display: none;
+  }
+}
+
+
 .headerTop {
   min-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: black;
 }
 
@@ -14,11 +48,6 @@
   color: white;
 }
 
-.headerTopItems {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 .headerTopItem {
   padding: 0px 20px;
