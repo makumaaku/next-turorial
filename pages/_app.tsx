@@ -1,10 +1,11 @@
 import Head from "next/head";
-import siteTitle from "../src/components/layout";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "theme-ui"
 import { theme } from "../src/logic/styles"
 import styled from "@emotion/styled"
 import 'highlight.js/styles/agate.css';
+
+const siteTitle = 'ファーストアップ'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

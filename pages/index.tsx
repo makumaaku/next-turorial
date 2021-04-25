@@ -1,13 +1,12 @@
-import Layout from "../src/components/layout";
-import utilStyles from "../src/styles/utils.module.css";
-import styles from "../src/styles/page/top.module.css";
-import { getSortedPostsData } from "../src/lib/posts";
 import { GetStaticProps } from "next";
+import styled from "@emotion/styled"
+import Layout from "../src/components/layout";
+import { getSortedPostsData } from "../src/lib/posts";
 import AppCard from "../src/components/organizms/app_card";
 import BlogCard from "../src/components/organizms/blog-card";
 import { PostData } from "../src/models/PostData";
 import { AppList } from "../src/lib/dev-apps";
-import styled from "@emotion/styled"
+
 
 
 export default function Home({ allPostsData }: { allPostsData: PostData[] }) {
@@ -15,34 +14,34 @@ export default function Home({ allPostsData }: { allPostsData: PostData[] }) {
     <Layout home>
 
       <Container>
-        <H2>Home</H2>
-        <div className={styles.body}>
-          <div>
-            <h2 className={utilStyles.headingLg}>アプリ一覧</h2>
-            <ul className={utilStyles.list}>
-              {AppList.map(({ name, imageUrl, linkUrl }) => (
-                <li className={utilStyles.listItem}>
-                  <AppCard appName={name} imageUrl={imageUrl} linkUrl={linkUrl} />
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className={utilStyles.headingLg}>Blog</h2>
-            <ul className={utilStyles.list}>
-              {allPostsData.map(({ id, date, title, imageUrl }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <BlogCard
-                    imageUrl={imageUrl}
-                    pass={`/posts/${id}`}
-                    title={title}
-                    dateString={date}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+
+
+        <H2>アプリ一覧</H2>
+        <List>
+          {AppList.map(({ name, imageUrl, linkUrl }) => (
+            //idとかにしたい
+            <ListItem key={name}>
+              <AppCard appName={name} imageUrl={imageUrl} linkUrl={linkUrl} />
+            </ListItem>
+          ))}
+        </List>
+
+
+        <H2>BLOG</H2>
+        <List>
+          {allPostsData.map(({ id, date, title, imageUrl }) => (
+            <ListItem key={id}>
+              <BlogCard
+                imageUrl={imageUrl}
+                pass={`/posts/${id}`}
+                title={title}
+                dateString={date}
+              />
+            </ListItem>
+          ))}
+        </List>
+
+
         <div>
           <p>
             (This is a sample website - you’ll be building a site like this in{" "}
@@ -64,12 +63,28 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Container = styled.div`
-width:100vw;
-max-width:60rem;
 align-items:center;
+display: flex;
+flex-direction: column;
+margin:0px 30px;
+background:grey;
 `;
 
 const H2 = styled.h2`
 text-align:center;
 text-decoration:underline black;
+`;
+
+const List = styled.ul`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+list-style: none;
+padding: 0;
+margin: 0;
+`;
+
+
+const ListItem = styled.li`
+margin: 0px;
 `;
