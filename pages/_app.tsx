@@ -1,6 +1,31 @@
-import '../src/styles/global.css'
-import { AppProps } from 'next/app'
+import Head from "next/head";
+import siteTitle from "../src/components/layout";
+import { AppProps } from "next/app";
+import { ThemeProvider } from "theme-ui"
+import { theme } from "../src/logic/styles"
+import styled from "@emotion/styled"
+import 'highlight.js/styles/agate.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+      <Head>
+        <title>{siteTitle}</title>
+        <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/mobile-phone_1f4f1.png" />
+      </Head>
+
+      <Container>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </Container>
+    </ThemeProvider>
+  )
 }
+
+
+const Container = styled.div`
+display : flex;
+flex-direction:column;
+align-items:center;
+`
