@@ -1,15 +1,16 @@
-import { useState } from 'react';
-import Link from 'next/link'
-import styles from '../../styles/layout.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-
+import Link from "next/link";
+import styles from "../../styles/layout.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { IconButton } from "theme-ui"
+import { IoMdSunny } from "react-icons/io"
+import {useToggleColorMode} from '../../logic/styles'
+ 
 //faChevronRightなど、Font Awesomeのhtmlのクラス名をcamelCaseに変更すればOK
 
-
-
 export default function Header() {
-  const [showDrawer, toggleShowDrawer] = useState(false);
+  
+  const toggleColorMode =  useToggleColorMode()
 
   return (
     <div className={styles.headerTop}>
@@ -36,11 +37,15 @@ export default function Header() {
           </a>
         </Link>
       </div>
-      <button onClick={() => console.log('aaaaaaaaa')} className={styles.headerMenu} >
-      <FontAwesomeIcon icon={faBars} color="white" size="sm" />
+      <button
+        onClick={() => console.log("aaaaaaaaa")}
+        className={styles.headerMenu}
+      >
+        <FontAwesomeIcon icon={faBars} color="white" size="sm" />
       </button>
-      
+      <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>
+        <IoMdSunny size={28}/>
+      </IconButton>
     </div>
-
-  )
+  );
 }
