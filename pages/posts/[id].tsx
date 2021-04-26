@@ -1,10 +1,8 @@
-import { useEffect } from 'react'
 import Layout from "../../src/components/layout";
 import { getAllPostIds, getPostData } from "../../src/lib/posts";
 import Head from "next/head";
 import Image from "next/image";
 import Date from "../../src/components/date";
-import utilStyles from "../../src/styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styled from "@emotion/styled"
 
@@ -22,24 +20,19 @@ export default function Post({
 }) {
 
   return (
-    
+
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
-     
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+      <Container>
+        <h1 >{postData.title}</h1>
         <Image priority src={postData.imageUrl} height={150} width={250} />
-        <div className={utilStyles.lightText}>
+        <div>
           <Date dateString={postData.date} />
         </div>
-       
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}/>
-      
-      </article>
-    
-      
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </Container>
     </Layout>
   );
 }
@@ -62,9 +55,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 ///これでタグごとに色々できるっぽい
-const Content = styled.div`
-p{
-  background:yellow;
-}
+const Container = styled.article`
 
 `

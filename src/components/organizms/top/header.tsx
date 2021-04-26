@@ -45,7 +45,9 @@ export default function Header() {
             お問い合わせ
               </HeaderItem>
         </Link>
-
+        <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>
+          <IoMdSunny size={28} color="white" />
+        </IconButton>
       </HeaderItems>
       {/* <button
         onClick={() => console.log("aaaaaaaaa")}
@@ -53,9 +55,7 @@ export default function Header() {
       >
         <FontAwesomeIcon icon={faBars} color="white" size="sm" />
       </button> */}
-      {/* <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>
-        <IoMdSunny size={28} />
-      </IconButton> */}
+
 
     </Container>
   );

@@ -57,8 +57,6 @@ export default function Layout({
 const Container = styled.div`
 min-height: 80vh;
 // max-width: 80%;
-// display: flex;
-// align-items:center;
-// justify-content:center;
-// background:yellow;
+display: flex;
+justify-content:center;
 `

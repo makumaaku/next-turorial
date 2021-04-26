@@ -1,47 +1,18 @@
 import { GetStaticProps } from "next";
+import { getSortedPostsData } from "../src/lib/posts";
+import { PostData } from "../src/models/PostData";
 import styled from "@emotion/styled"
 import Layout from "../src/components/layout";
-import { getSortedPostsData } from "../src/lib/posts";
-import AppCard from "../src/components/organizms/app_card";
-import BlogCard from "../src/components/organizms/blog-card";
-import { PostData } from "../src/models/PostData";
-import { AppList } from "../src/lib/dev-apps";
-
+import AppArea  from "../src/components/organizms/appList/app_area";
+import BlogArea  from "../src/components/organizms/blog/blog_area";
 
 
 export default function Home({ allPostsData }: { allPostsData: PostData[] }) {
   return (
     <Layout home>
-
       <Container>
-
-
-        <H2>アプリ一覧</H2>
-        <List>
-          {AppList.map(({ name, imageUrl, linkUrl }) => (
-            //idとかにしたい
-            <ListItem key={name}>
-              <AppCard appName={name} imageUrl={imageUrl} linkUrl={linkUrl} />
-            </ListItem>
-          ))}
-        </List>
-
-
-        <H2>BLOG</H2>
-        <List>
-          {allPostsData.map(({ id, date, title, imageUrl }) => (
-            <ListItem key={id}>
-              <BlogCard
-                imageUrl={imageUrl}
-                pass={`/posts/${id}`}
-                title={title}
-                dateString={date}
-              />
-            </ListItem>
-          ))}
-        </List>
-
-
+      <AppArea />
+      <BlogArea allPostsData={allPostsData}/>
         <div>
           <p>
             (This is a sample website - you’ll be building a site like this in{" "}
@@ -63,11 +34,8 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Container = styled.div`
-align-items:center;
 display: flex;
 flex-direction: column;
-margin:0px 30px;
-background:grey;
 `;
 
 const H2 = styled.h2`
@@ -77,6 +45,7 @@ text-decoration:underline black;
 
 const List = styled.ul`
 display: flex;
+justify-content:center;
 flex-direction: row;
 flex-wrap: wrap;
 list-style: none;
