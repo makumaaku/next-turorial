@@ -57,11 +57,9 @@
 }
 
 
-/* min-heightを指定して、Footerが一番下にくるように */
 .children{
   min-height: 80vh;
   width: 100%;
-
 }
 
 .backToHome {

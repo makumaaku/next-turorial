@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/layout.module.css";
-import Header from "../components/organizms/header";
-import Footer from "./organizms/footer";
+import styled from "@emotion/styled"
+import Header from "./organizms/top/header";
+import Footer from "./organizms/top/footer";
+
 
 export const siteTitle = "ファーストアップ";
 
@@ -44,8 +45,18 @@ export default function Layout({
           </>
         )}
       </header>
-      <main className={styles.children}>{children}</main>
+      <Container>
+        <main>{children}</main>
+      </Container>
       <Footer />
     </div>
   );
 }
+
+/* min-heightを指定して、Footerが一番下にくるように */
+const Container = styled.div`
+min-height: 80vh;
+// max-width: 80%;
+display: flex;
+justify-content:center;
+`
