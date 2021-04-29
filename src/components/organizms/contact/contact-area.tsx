@@ -17,7 +17,7 @@ export default function ContactArea() {
     };
     return (
         <Container>
-            <h2>お問い合わせフォーム</h2>
+            <H2>お問い合わせ</H2>
             {errorMessage && <p>{errorMessage}</p>}
             <form method="post" onSubmit={handleSubmit}>
                 <FormWrapper>
@@ -58,7 +58,10 @@ export default function ContactArea() {
                         required
                     />
                 </FormWrapper>
-                <SubmitBtn type="submit">送信</SubmitBtn>
+                <ButtonWrapper>
+                    <SubmitBtn type="submit">送信</SubmitBtn>
+                </ButtonWrapper>
+
             </form>
         </Container>
 
@@ -74,6 +77,11 @@ justify-content: center;
 margin-bottom: 20px;
 `
 
+const H2 = styled.h2`
+text-align:center;
+text-decoration:underline black;
+`;
+
 const FormWrapper = styled.div`
 padding-bottom: 20px;
 `
@@ -86,7 +94,6 @@ font-weight: 600;
 // https://webparts.cman.jp/button/submit/ 
 //ここでcssを生成した
 const SubmitBtn = styled.button`
-display       : inline-block;
   font-size     : 12pt;        /* 文字サイズ */
   text-align    : center;      /* 文字位置   */
   cursor        : pointer;     /* カーソル   */
@@ -102,6 +109,11 @@ display       : inline-block;
     box-shadow    : none;        /* カーソル時の影消去 */
     opacity       : 1;           /* カーソル時透明度 */
   }
+`
+
+const ButtonWrapper = styled.div`
+  display:flex;
+  justify-content: center;
 `
 
 const Input = styled.input`

@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 import Layout from "../src/components/layout";
 import AppArea  from "../src/components/organizms/appList/app_area";
 import BlogArea  from "../src/components/organizms/blog/blog_area";
+import CoutactUsPage  from "../src/components/organizms/contact/contact-area";
 
 
 export default function Home({ allPostsData }: { allPostsData: PostData[] }) {
@@ -13,6 +14,7 @@ export default function Home({ allPostsData }: { allPostsData: PostData[] }) {
       <Container>
       <AppArea />
       <BlogArea allPostsData={allPostsData}/>
+      <CoutactUsPage />
         <div>
           <p>
             (This is a sample website - you’ll be building a site like this in{" "}
