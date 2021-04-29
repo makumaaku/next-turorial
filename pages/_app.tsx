@@ -3,7 +3,7 @@ import { AppProps } from "next/app";
 import { ThemeProvider } from "theme-ui"
 import { theme } from "../src/logic/styles"
 import styled from "@emotion/styled"
-import 'highlight.js/styles/agate.css';
+import 'highlight.js/styles/github-gist.css';
 
 const siteTitle = 'ファーストアップ'
 

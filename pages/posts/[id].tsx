@@ -24,15 +24,18 @@ export default function Post({
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"></link>
       </Head>
       <Container>
         <h1 >{postData.title}</h1>
-        <Image priority src={postData.imageUrl} height={150} width={250} />
+        <Image priority src={postData.imageUrl} height={350} width={500} />
         <div>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </Container>
+        <GithubMarkdown>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className="markdown-body"/>
+        </GithubMarkdown>
+        </Container>
     </Layout>
   );
 }
@@ -54,7 +57,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-///これでタグごとに色々できるっぽい
-const Container = styled.article`
 
+const Container = styled.div`
+display:flex;
+flex-direction: column;
+align-items:center;
+`
+
+const GithubMarkdown = styled.div`
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 80 vw;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+    max-width: 300px;
+  }
+}
 `
