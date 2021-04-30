@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { IconButton } from "theme-ui"
 import { IoMdSunny } from "react-icons/io"
+import { HiMenu } from "react-icons/hi"
 import { useToggleColorMode } from '../../../logic/styles'
 import styled from "@emotion/styled"
+
 
 //faChevronRightなど、Font Awesomeのhtmlのクラス名をcamelCaseに変更すればOK
 
@@ -14,7 +16,6 @@ export default function Header() {
 
   return (
     <Container>
-
       <HeaderTitle>
         <Link href="/">
           <a>
@@ -23,23 +24,17 @@ export default function Header() {
           </a>
         </Link>
       </HeaderTitle>
-
       <HeaderItems>
-
         <Link href="/hp/app-list">
           <HeaderItem>
             制作アプリ一覧
               </HeaderItem>
         </Link>
-
-
         <Link href="/posts/">
           <HeaderItem>
             ブログ
               </HeaderItem>
         </Link>
-
-
         <Link href="/hp/contact-us">
           <HeaderItem>
             お問い合わせ
@@ -49,12 +44,12 @@ export default function Header() {
           <IoMdSunny size={28} color="white" />
         </IconButton>
       </HeaderItems>
-      {/* <button
+
+      <MenuButton
         onClick={() => console.log("aaaaaaaaa")}
-        className={styles.headerMenu}
       >
-        <FontAwesomeIcon icon={faBars} color="white" size="sm" />
-      </button> */}
+        <HiMenu size={28} color="white" />
+      </MenuButton>
 
 
     </Container>
@@ -68,6 +63,7 @@ display: flex;
 flex-direction: row;
 background-color: black;
 justify-content: space-between;
+padding:0px 20px;
 `
 
 const HeaderTitle = styled.div`
@@ -81,14 +77,21 @@ font-weight: 700;
 color: white;
 `
 
-const HeaderItems = styled.div`
+const HeaderItems = styled.button`
 display:flex;
 align-items: center;
+
+@media (max-width: 767px) {
+  display:none;
+}
 `
 
-const HeaderMenu = styled.div`
-align-items: stretch;
-background-color: red;
+const MenuButton = styled.div`
+display:flex;
+align-items: center;
+@media (min-width: 767px) {
+  display:none;
+}
 `
 
 
