@@ -1,8 +1,8 @@
-import { base, dark } from "@theme-ui/presets";
-import { merge, useColorMode } from "theme-ui";
+import { base as preset, dark } from "@theme-ui/presets";
+import { merge, useColorMode,Theme } from "theme-ui";
 import { useCallback } from "react";
 
-export const theme = merge(base, {
+export const theme = merge(preset as Theme, {
   styles: {
     root: {
       button: {
@@ -17,7 +17,7 @@ export const theme = merge(base, {
     },
   },
   colors: {
-    ...base.colors,
+    ...preset.colors,
     modes: {
       dark: dark.colors,
     },
