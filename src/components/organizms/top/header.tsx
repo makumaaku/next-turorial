@@ -27,7 +27,7 @@ export default function Header() {
       <HeaderItems>
         <Link href="/hp/app-list">
           <HeaderItem>
-            制作アプリ一覧
+            アプリ一覧
               </HeaderItem>
         </Link>
         <Link href="/posts/">
