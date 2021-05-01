@@ -35,13 +35,24 @@ export default function Layout({
       <header>
         {home && (
           <>
-            {/* <Image
+            <Image
               priority
-              src="/images/img_home.png"
-              height={600}
+              src="https://mark-saito-next-blog.s3-ap-northeast-1.amazonaws.com/hp-top-header.png"
+              height={800}
               width={1600}
-              alt={'トップページの画像'}
-            /> */}
+              alt={'トップページのヘッダー画像'}
+            />
+          </>
+        )}
+        {!home && (
+          <>
+            <Image
+              priority
+              src="https://mark-saito-next-blog.s3-ap-northeast-1.amazonaws.com/hp-sub-header2.png"
+              height={400}
+              width={1600}
+              alt={'ヘッダー画像'}
+            />
           </>
         )}
       </header>
