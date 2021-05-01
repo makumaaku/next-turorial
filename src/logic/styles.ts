@@ -14,6 +14,10 @@ export const theme = merge(preset as Theme, {
         cursor: "pointer",
         outline: "inherit",
       },
+      a:{
+        color:'black',
+        textDecoration:"none"
+      }
     },
   },
   colors: {
