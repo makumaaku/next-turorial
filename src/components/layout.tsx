@@ -67,7 +67,8 @@ export default function Layout({
 /* min-heightを指定して、Footerが一番下にくるように */
 const Container = styled.div`
 min-height: 80vh;
-// max-width: 80%;
 display: flex;
 justify-content:center;
+background:#e1e1e1;
 `
+

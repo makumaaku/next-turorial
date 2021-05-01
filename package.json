@@ -10,9 +10,6 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.3.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
     "@theme-ui/presets": "^0.7.3",
     "date-fns": "^2.17.0",
     "get-orientation": "^1.1.2",

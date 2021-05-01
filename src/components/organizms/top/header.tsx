@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { IconButton } from "theme-ui"
 import { IoMdSunny } from "react-icons/io"
 import { HiMenu } from "react-icons/hi"
