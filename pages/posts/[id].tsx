@@ -21,14 +21,14 @@ export default function Post({
 
   return (
 
-    <Layout>
+    <Layout blog>
       <Head>
         <title>{postData.title}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"></link>
       </Head>
       <Container>
         <h1 >{postData.title}</h1>
-        <Image priority src={postData.imageUrl} height={350} width={500} />
+        <Image priority src={postData.imageUrl} height={400} width={800} />
         <div>
           <Date dateString={postData.date} />
         </div>
