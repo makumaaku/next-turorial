@@ -10,9 +10,11 @@ export const siteTitle = "ファーストアップ";
 export default function Layout({
   children,
   home,
+  blog
 }: {
   children: React.ReactNode;
   home?: boolean;
+  blog?: boolean;
 }) {
   return (
     <div>
@@ -44,7 +46,7 @@ export default function Layout({
             />
           </>
         )}
-        {!home && (
+        {!home && !blog && (
           <>
             <Image
               priority
@@ -69,6 +71,5 @@ const Container = styled.div`
 min-height: 80vh;
 display: flex;
 justify-content:center;
-background:#e1e1e1;
 `
 

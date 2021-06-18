@@ -14,7 +14,7 @@ export default function Blog({
   allPostsData: PostData[]
 }) {
   return (
-    <Layout>
+    <Layout blog>
       <Head>
         <title>ブログ</title>
       </Head>
@@ -56,6 +56,7 @@ displey:flex;
 flex-direction:column;
 width: 60 vw;
 background:white;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 @media (min-width: 1024px) {
  margin:0px 20px;
@@ -68,6 +69,7 @@ flex-direction:column;
 width: 300px;
 background:white;
 margin-right:20px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 @media (max-width: 1024px) {
   display:none;
