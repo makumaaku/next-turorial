@@ -10,7 +10,7 @@ import styled from "@emotion/styled"
 
 export default function Header() {
 
-  const toggleColorMode = useToggleColorMode()
+  // const toggleColorMode = useToggleColorMode()
 
   return (
     <Container>
@@ -38,9 +38,9 @@ export default function Header() {
             お問い合わせ
               </HeaderItem>
         </Link>
-        <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>
+        {/* <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>
           <IoMdSunny size={28} color="white" />
-        </IconButton>
+        </IconButton> */}
       </HeaderItems>
 
       <MenuButton
