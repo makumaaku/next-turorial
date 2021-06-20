@@ -22,9 +22,9 @@ export const theme = merge(preset as Theme, {
   },
   colors: {
     ...preset.colors,
-    modes: {
-      dark: dark.colors,
-    },
+    // modes: {
+    //   dark: dark.colors,
+    // },
   },
 });
 
