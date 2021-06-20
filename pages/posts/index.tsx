@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps = async () => {
 const Row = styled.ul`
 display: flex;
 justify-content:center;
-flex-direction: row;
 list-style: none;
 padding: 0;
 margin: 0;
@@ -56,7 +55,6 @@ displey:flex;
 flex-direction:column;
 width: 60 vw;
 background:white;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 @media (min-width: 1024px) {
  margin:0px 20px;
@@ -68,7 +66,6 @@ displey:flex;
 flex-direction:column;
 width: 300px;
 background:white;
-margin-right:20px;
 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 @media (max-width: 1024px) {
