@@ -1,7 +1,7 @@
 ---
 title: 'test'
 date: '2020-01-02'
-imageUrl: '/blog1.webp'
+imageUrl: 'https://mark-saito-next-blog.s3.ap-northeast-1.amazonaws.com/blog/blog1.webp'
 
 ---
 
