@@ -64,7 +64,7 @@ background:white;
 const SideBar = styled.div`
 displey:flex;
 flex-direction:column;
-width: 300px;
+width: 350px;
 background:white;
 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
