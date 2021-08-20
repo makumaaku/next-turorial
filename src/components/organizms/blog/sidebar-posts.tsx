@@ -16,7 +16,7 @@ function SideBarPosts({
                     <Link href={`/posts/${id}`}>
                         <a>
                             <ListItem key={id}>
-                                <Image src={imageUrl} height={100} width={100} layout="fixed" />
+                                <Image src={imageUrl} height={100} width={150} layout="fixed" />
                                 <Column>
                                     <PostDate>{date}</PostDate>
                                     <PostTitle>{title}</PostTitle>

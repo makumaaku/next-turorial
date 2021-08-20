@@ -69,11 +69,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 
-
+//ページの大元にpaddingが入っていて、space-between使えない？
 const Row = styled.div`
 display: flex;
 padding: 0;
 margin: 0;
+// justify-content: space-between;
 `
 
 
@@ -83,15 +84,20 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
+
+@media (max-width: 1024px) {
+  max-width: 80vw;
+ }
 @media (min-width: 1024px) {
  margin:0px 20px;
+ max-width: 60vw;
+ padding: 60px;
 }
 `
 
 const SideBar = styled.div`
-width: 300px;
-background:white;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+width: 350px;
+// box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
 @media (max-width: 1024px) {
   display:none;
@@ -105,7 +111,7 @@ const GithubMarkdown = styled.div`
   min-width: 80 vw;
   max-width: 100 vw;
   margin: 0 auto;
-  padding: 45px;
+  padding-top:48px;
 }
 
 @media (max-width: 767px) {
