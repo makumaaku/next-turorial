@@ -2,6 +2,7 @@
 title: 'iOS DeviceSupportを削除後にiosシミュレータが動かなくなる問題の解決策'
 date: '2021-06-29'
 imageUrl: 'https://mark-saito-next-blog.s3.ap-northeast-1.amazonaws.com/blog/1-ios-simulator-failed.jpg'
+tag: 'Xcode'
 
 ---
 
