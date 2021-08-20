@@ -12,7 +12,7 @@ function SideBarPosts({
         <Container>
             <H3>記事一覧</H3>
             <List>
-                {allPostsData.map(({ id, date, title, imageUrl }) => (
+                {allPostsData.map(({ id, date, title, imageUrl,tag }) => (
                     <Link href={`/posts/${id}`}>
                         <a>
                             <ListItem key={id}>

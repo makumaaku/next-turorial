@@ -6,7 +6,8 @@ import Image from "next/image";
 import ProfileArea from "../../src/components/organizms/blog/profile-area"
 import SideBarPosts from "../../src/components/organizms/blog/sidebar-posts"
 import { PostData } from "../../src/models/PostData";
-import Date from "../../src/components/date";
+import DateTag from "../../src/components/molecules/tag/dateTag";
+import BlogTag from "../../src/components/molecules/tag/blogTag";
 import styled from "@emotion/styled"
 
 
@@ -18,6 +19,7 @@ export default function Post({
     title: string;
     date: string;
     imageUrl: string;
+    tag: string;
     contentHtml: string;
   }, allPostsData: PostData[];
 }) {
@@ -32,10 +34,13 @@ export default function Post({
       <Row>
         <BlogContainer>
           <h1 >{postData.title}</h1>
+          <Row>
+          <DateTag dateString ={postData.date} />
+          <W8></W8>
+          <BlogTag tag ={postData.tag} />
+          </Row>
+          <H16></H16>
           <Image priority src={postData.imageUrl} height={400} width={800} />
-          <div>
-            <Date dateString={postData.date} />
-          </div>
           <GithubMarkdown>
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className="markdown-body" />
           </GithubMarkdown>
@@ -78,11 +83,10 @@ margin: 0;
 `
 
 
-
 const BlogContainer = styled.div`
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: start;
 
 
 @media (max-width: 1024px) {
@@ -121,3 +125,18 @@ const GithubMarkdown = styled.div`
   }
 }
 `
+const Tag = styled.div`
+color:white;
+background:black;
+padding:2px 10px;
+border-radius: 30px;
+`
+
+const H16 = styled.div`
+height:16px;
+`
+
+const W8 = styled.div`
+width:8px;
+`
+
