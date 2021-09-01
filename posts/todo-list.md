@@ -2,7 +2,7 @@
 title: 'ホームページ作成のTODOリスト'
 date: '2021-05-01'
 imageUrl: 'https://mark-saito-next-blog.s3-ap-northeast-1.amazonaws.com/blog/hp-blog-todo.jpg'
-
+tag: 'TODO'
 ---
 
 # ホームページ作成におけるTODOリスト

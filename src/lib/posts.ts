@@ -7,7 +7,8 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getSortedPostsData() {
+//全postを返却
+export function getAllPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -28,11 +29,18 @@ export function getSortedPostsData() {
         date: string;
         title: string;
         imageUrl: string;
+        tag: string;
       }),
     };
   });
+  return allPostsData;
+}
+
+//日付でソートした全postを返却
+export function getSortedPostsData() {
+  const posts = getAllPostsData();
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+  return posts.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -41,8 +49,9 @@ export function getSortedPostsData() {
   });
 }
 
+//ブログのファイル名リストを返却(pathの生成に使用している)
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames: string[] = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -50,6 +59,31 @@ export function getAllPostIds() {
       },
     };
   });
+}
+
+//渡されたタグを同じタグを持つpostを返却
+export function getAllPostTags() {
+  const posts = getAllPostsData();
+  const allTags = posts.map((post) => {
+    return {
+      params: {
+        tag: post.tag
+      },
+    };
+  });
+  return allTags;
+}
+
+//渡されたタグを同じタグを持つpostを返却
+export function getAllTagPosts(targetTag) {
+  const posts = getAllPostsData();
+  console.log('タグ名')
+  console.log(targetTag)
+  const sameTagPosts = posts.filter((post) => {
+    return post.tag === targetTag
+  });
+  return sameTagPosts;
+
 }
 
 export async function getPostData(id: string) {
@@ -70,6 +104,6 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string; imageUrl: string,tag:string }),
+    ...(matterResult.data as { date: string; title: string; imageUrl: string, tag: string }),
   };
 }
