@@ -13,7 +13,7 @@ export default function Home({ allPostsData }: { allPostsData: PostData[] }) {
     <Layout home>
       <Container>
         <AppArea />
-        <BlogArea allPostsData={allPostsData} />
+        <BlogArea allPostsData={allPostsData} isPost={true} />
         <CoutactUsPage />
       </Container>
     </Layout>

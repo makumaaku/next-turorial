@@ -20,7 +20,7 @@ export default function Blog({
       </Head>
       <Row>
         <BlogContainer>
-          <BlogArea allPostsData={allPostsData} />
+          <BlogArea allPostsData={allPostsData} isPost={true} />
         </BlogContainer>
         <SideBar>
           <div>

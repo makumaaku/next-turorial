@@ -33,6 +33,11 @@ export default function Header() {
             ブログ
               </HeaderItem>
         </Link>
+        <Link href="/privacy-policy/">
+          <HeaderItem>
+            プライバシーポリシー
+              </HeaderItem>
+        </Link>
         <Link href="/hp/contact-us">
           <HeaderItem>
             お問い合わせ

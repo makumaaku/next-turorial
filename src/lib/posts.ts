@@ -6,17 +6,19 @@ import html from 'remark-html'
 import highlight from 'remark-highlight.js'
 
 const postsDirectory = path.join(process.cwd(), "posts");
+const privacyPolicyDirectory = path.join(process.cwd(), "privacy-policy");
 
 //全postを返却
-export function getAllPostsData() {
+export function getAllPostsData(isPost: boolean = true) {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
+  const directory = isPost ? postsDirectory : privacyPolicyDirectory;
+  const fileNames = fs.readdirSync(directory);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(directory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the post metadata section
@@ -50,8 +52,9 @@ export function getSortedPostsData() {
 }
 
 //ブログのファイル名リストを返却(pathの生成に使用している)
-export function getAllPostIds() {
-  const fileNames: string[] = fs.readdirSync(postsDirectory);
+export function getAllPostIds(isPost:boolean = true) {
+  const directory = isPost ? postsDirectory : privacyPolicyDirectory;
+  const fileNames: string[] = fs.readdirSync(directory);
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -75,7 +78,7 @@ export function getAllPostTags() {
 }
 
 //渡されたタグを同じタグを持つpostを返却
-export function getAllTagPosts(targetTag) {
+export function getAllTagPosts(targetTag: string|string[]) {
   const posts = getAllPostsData();
   console.log('タグ名')
   console.log(targetTag)
@@ -86,8 +89,9 @@ export function getAllTagPosts(targetTag) {
 
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(id: string, isPost: boolean = true) {
+  const directory = isPost ? postsDirectory : privacyPolicyDirectory;
+  const fullPath = path.join(directory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section

@@ -41,7 +41,7 @@ export default function TagPage({
           </Head>
           <Row>
             <BlogContainer>
-              <BlogArea allPostsData={allTagPostsData} />
+              <BlogArea allPostsData={allTagPostsData} isPost={true}/>
             </BlogContainer>
             <SideBar>
               <div>

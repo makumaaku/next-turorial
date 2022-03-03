@@ -16,7 +16,7 @@ export default function Blog({
         <title>ブログ</title>
       </Head>
 
-      <BlogArea allPostsData={allPostsData} />
+      <BlogArea allPostsData={allPostsData} isPost={true} />
     </Layout>
   );
 }
