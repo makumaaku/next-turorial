@@ -1,10 +1,14 @@
 import styled from "@emotion/styled"
+import Link from 'next/link'
 
 function BlogTag({ tag }: { tag: string }) {
     return (
-        <Tag>
-            {tag}
-        </Tag>
+        <Link href={`/tag/${encodeURIComponent(tag)}`}>
+            <a><Tag>
+                {tag}
+            </Tag></a>
+        </Link>
+
     )
 }
 

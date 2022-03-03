@@ -62,8 +62,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.id as string);
+//このファイルのPostはgetStaticPropsでreturnしたものを受け取っている
+//contextはgetStaticPathsのpaths内のobjectを参照する
+//参考　https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type
+export const getStaticProps: GetStaticProps = async (context) => {
+  const postData = await getPostData(context.params.id as string);
   const allPostsData = getSortedPostsData();
   return {
     props: {
