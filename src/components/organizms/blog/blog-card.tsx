@@ -9,12 +9,15 @@ export default function BlogCard({
   pass,
   title,
   dateString,
+  isPost,
 }: {
   imageUrl: string;
   pass: string;
   title: string;
   dateString: string;
+  isPost:boolean;
 }) {
+  const cardImageHeight = isPost ? 200:350;
   return (
     <CardContainer>
       <CardImage>
@@ -23,7 +26,7 @@ export default function BlogCard({
             <Image
               priority
               src={imageUrl}
-              height={200}
+              height={cardImageHeight}
               width={350}
             />
             <CardInfo>

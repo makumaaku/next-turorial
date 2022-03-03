@@ -15,6 +15,7 @@ export default function BlogArea({ allPostsData, isPost = true }: { allPostsData
               pass={`/posts/${id}`}
               title={title}
               dateString={date}
+              isPost={isPost}
             />
           </ListItem>
         ))}
