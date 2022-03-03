@@ -1,16 +1,16 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
 import Header from "./organizms/top/header";
 import Footer from "./organizms/top/footer";
-
 
 export const siteTitle = "ファーストアップ";
 
 export default function Layout({
   children,
   home,
-  blog
+  blog,
 }: {
   children: React.ReactNode;
   home?: boolean;
@@ -42,7 +42,7 @@ export default function Layout({
               src="https://mark-saito-next-blog.s3-ap-northeast-1.amazonaws.com/hp-top-header.png"
               height={800}
               width={1600}
-              alt={'トップページのヘッダー画像'}
+              alt={"トップページのヘッダー画像"}
             />
           </>
         )}
@@ -53,7 +53,7 @@ export default function Layout({
               src="https://mark-saito-next-blog.s3-ap-northeast-1.amazonaws.com/hp-sub-header2.png"
               height={400}
               width={1600}
-              alt={'ヘッダー画像'}
+              alt={"ヘッダー画像"}
             />
           </>
         )}
@@ -68,8 +68,7 @@ export default function Layout({
 
 /* min-heightを指定して、Footerが一番下にくるように */
 const Container = styled.div`
-min-height: 80vh;
-display: flex;
-justify-content:center;
-`
-
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+`;

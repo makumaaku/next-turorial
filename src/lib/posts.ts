@@ -1,15 +1,15 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from 'remark'
-import html from 'remark-html'
-import highlight from 'remark-highlight.js'
+import { remark } from "remark";
+import html from "remark-html";
+import highlight from "remark-highlight.js";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 const privacyPolicyDirectory = path.join(process.cwd(), "privacy-policy");
 
 //全postを返却
-export function getAllPostsData(isPost: boolean = true) {
+export function getAllPostsData(isPost = true) {
   // Get file names under /posts
   const directory = isPost ? postsDirectory : privacyPolicyDirectory;
   const fileNames = fs.readdirSync(directory);
@@ -52,7 +52,7 @@ export function getSortedPostsData() {
 }
 
 //ブログのファイル名リストを返却(pathの生成に使用している)
-export function getAllPostIds(isPost:boolean = true) {
+export function getAllPostIds(isPost = true) {
   const directory = isPost ? postsDirectory : privacyPolicyDirectory;
   const fileNames: string[] = fs.readdirSync(directory);
   return fileNames.map((fileName) => {
@@ -70,7 +70,7 @@ export function getAllPostTags() {
   const allTags = posts.map((post) => {
     return {
       params: {
-        tag: post.tag
+        tag: post.tag,
       },
     };
   });
@@ -78,18 +78,17 @@ export function getAllPostTags() {
 }
 
 //渡されたタグを同じタグを持つpostを返却
-export function getAllTagPosts(targetTag: string|string[]) {
+export function getAllTagPosts(targetTag: string | string[]) {
   const posts = getAllPostsData();
-  console.log('タグ名')
-  console.log(targetTag)
+  console.log("タグ名");
+  console.log(targetTag);
   const sameTagPosts = posts.filter((post) => {
-    return post.tag === targetTag
+    return post.tag === targetTag;
   });
   return sameTagPosts;
-
 }
 
-export async function getPostData(id: string, isPost: boolean = true) {
+export async function getPostData(id: string, isPost = true) {
   const directory = isPost ? postsDirectory : privacyPolicyDirectory;
   const fullPath = path.join(directory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -108,6 +107,11 @@ export async function getPostData(id: string, isPost: boolean = true) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string; imageUrl: string, tag: string }),
+    ...(matterResult.data as {
+      date: string;
+      title: string;
+      imageUrl: string;
+      tag: string;
+    }),
   };
 }
