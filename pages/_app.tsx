@@ -5,7 +5,7 @@ import { theme } from "../src/logic/styles";
 import styled from "@emotion/styled";
 import "highlight.js/styles/github-gist.css";
 
-const siteTitle = 'ファーストアップ';
+const siteTitle = "ファーストアップ";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -21,12 +21,11 @@ export default function App({ Component, pageProps }: AppProps) {
         </main>
       </Container>
     </ThemeProvider>
-  )
+  );
 }
 
-
 const Container = styled.div`
-display : flex;
-flex-direction:column;
-align-items:center;
-`
+··display : flex;
+··flex-direction:column;
+··align-items:center;
+`;
