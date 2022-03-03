@@ -1,3 +1,5 @@
+import React from "react";
+
 const ContactSuccessPage: React.FC = () => (
   <div>
     <h2>お問い合わせありがとうございます</h2>

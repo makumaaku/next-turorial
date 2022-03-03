@@ -4,5 +4,5 @@ export interface PostData {
   title: string;
   id: string;
   imageUrl: string;
-  tag: string
+  tag: string;
 }

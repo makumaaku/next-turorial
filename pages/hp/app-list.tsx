@@ -1,6 +1,7 @@
+import React from "react";
 import Head from "next/head";
 import Layout from "../../src/components/layout";
-import AppArea  from "../../src/components/organizms/appList/app_area";
+import AppArea from "../../src/components/organizms/appList/app_area";
 
 export default function AppListPage() {
   return (

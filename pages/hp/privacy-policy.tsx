@@ -4,25 +4,26 @@ import Layout from "../../src/components/layout";
 import BlogArea from "../../src/components/organizms/blog/blog_area";
 import { PostData } from "../../src/models/PostData";
 import { GetStaticProps } from "next";
-import { getSortedPostsData } from "../../src/lib/posts";
+import { getAllPostsData } from "../../src/lib/posts";
 
-export default function Blog({ allPostsData }: { allPostsData: PostData[] }) {
+export default function Blog({ allPPData }: { allPPData: PostData[] }) {
   return (
     <Layout>
       <Head>
-        <title>ブログ</title>
+        <title>プライバシーポリシー</title>
       </Head>
 
-      <BlogArea allPostsData={allPostsData} isPost={true} />
+      <BlogArea allPostsData={allPPData} isPost={false} />
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const isPost = false;
+  const allPPData = getAllPostsData(isPost);
   return {
     props: {
-      allPostsData,
+      allPPData,
     },
   };
 };

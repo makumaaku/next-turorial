@@ -1,5 +1,5 @@
-import { base as preset, dark } from "@theme-ui/presets";
-import { merge, useColorMode,Theme } from "theme-ui";
+import { base as preset } from "@theme-ui/presets";
+import { merge, useColorMode, Theme } from "theme-ui";
 import { useCallback } from "react";
 
 export const theme = merge(preset as Theme, {
@@ -14,10 +14,10 @@ export const theme = merge(preset as Theme, {
         cursor: "pointer",
         outline: "inherit",
       },
-      a:{
-        color:'black',
-        textDecoration:"none"
-      }
+      a: {
+        color: "black",
+        textDecoration: "none",
+      },
     },
   },
   colors: {

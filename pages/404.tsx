@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
 // 3秒後にrootページにリダイレクトさせる

@@ -22,7 +22,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/ba-ts-comment": "off",
-    "react/react-in/jsx/scope": "off",
+    // "react/react-in/jsx/scope": "off",
     "prettier/prettier": "error",
   },
   settings: {
