@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { AppProps } from "next/app";
-import { ThemeProvider } from "theme-ui"
-import { theme } from "../src/logic/styles"
-import styled from "@emotion/styled"
-import 'highlight.js/styles/github-gist.css';
+import { ThemeProvider } from "theme-ui";
+import { theme } from "../src/logic/styles";
+import styled from "@emotion/styled";
+import "highlight.js/styles/github-gist.css";
 
-const siteTitle = 'ファーストアップ'
+const siteTitle = 'ファーストアップ';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

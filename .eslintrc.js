@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2020: true,
     node: true,
   },
   extends: [
@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
+    "next",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
