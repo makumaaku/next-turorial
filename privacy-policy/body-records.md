@@ -1,5 +1,5 @@
 ---
-title: '[Body Recodes] プライバシーポリシー'
+title: '[Body Records] プライバシーポリシー'
 date: '2022-03-04'
 imageUrl: 'https://is4-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/46/1d/7e461db7-f6a7-4d03-c82c-ffc8436029b6/AppIcon-1x_U007emarketing-0-7-0-85-220.png/540x540bb.jpg'
 tag: 'プライバシーポリシー'
