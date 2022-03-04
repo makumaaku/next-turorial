@@ -10,7 +10,7 @@ export default function BlogArea({
   allPostsData: PostData[];
   isPost: boolean;
 }) {
-  const title = isPost == true ? "BLOG" : "プライバシーポリシー";
+  const title = isPost ? "BLOG" : "プライバシーポリシー";
   return (
     <div>
       <H2>{title}</H2>
@@ -19,7 +19,7 @@ export default function BlogArea({
           <ListItem key={id}>
             <BlogCard
               imageUrl={imageUrl}
-              pass={`/posts/${id}`}
+              pass={isPost ? `/posts/${id}` : `/privacy-policy/${id}`}
               title={title}
               dateString={date}
               isPost={isPost}
