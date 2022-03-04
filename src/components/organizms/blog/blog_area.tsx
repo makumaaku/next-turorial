@@ -19,7 +19,7 @@ export default function BlogArea({
           <ListItem key={id}>
             <BlogCard
               imageUrl={imageUrl}
-              pass={isPost ? `/posts/${id}`:`/privacy-policy/${id}`}
+              pass={isPost ? `/posts/${id}` : `/privacy-policy/${id}`}
               title={title}
               dateString={date}
               isPost={isPost}
