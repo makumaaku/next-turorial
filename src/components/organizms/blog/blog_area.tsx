@@ -10,7 +10,7 @@ export default function BlogArea({
   allPostsData: PostData[];
   isPost: boolean;
 }) {
-  const title = isPost  ? "BLOG" : "プライバシーポリシー";
+  const title = isPost ? "BLOG" : "プライバシーポリシー";
   return (
     <div>
       <H2>{title}</H2>
