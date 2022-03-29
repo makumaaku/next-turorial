@@ -1,6 +1,6 @@
 ---
-title: '[おうち風呂] プライバシーポリシー'
-date: '2022-03-04'
+title: '[体感温度] プライバシーポリシー'
+date: '2022-03-29'
 imageUrl: 'https://is2-ssl.mzstatic.com/image/thumb/Purple116/v4/0e/7a/98/0e7a9872-152c-f7e4-7ba6-82c7b0465c43/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-P3-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/540x540bb.jpg'
 tag: 'プライバシーポリシー'
 
