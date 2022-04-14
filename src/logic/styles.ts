@@ -10,6 +10,7 @@ export const theme = merge(preset as Theme, {
         color: "inherit",
         border: "none",
         padding: 0,
+        margin: 0,
         font: "inherit",
         cursor: "pointer",
         outline: "inherit",
@@ -18,6 +19,14 @@ export const theme = merge(preset as Theme, {
         color: "black",
         textDecoration: "none",
       },
+      main: {
+        padding: 0,
+        margin: 0,
+      },
+      body:{
+        padding: 0,
+        margin: 0,
+      }
     },
   },
   colors: {

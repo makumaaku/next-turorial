@@ -50,6 +50,11 @@ const CardContainer = styled.div`
   margin: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  &:hover{
+    transform: scale(1.04, 1.04);
+    transition: all 0.3s;
+  }
 `;
 
 const CardImage = styled.div`
