@@ -23,10 +23,10 @@ export const theme = merge(preset as Theme, {
         padding: 0,
         margin: 0,
       },
-      body:{
+      body: {
         padding: 0,
         margin: 0,
-      }
+      },
     },
   },
   colors: {

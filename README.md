@@ -11,3 +11,6 @@ https://vercel.com/makumaaku/next-home-page
 
 ヘッダー画像の作成(Canva)
 https://www.canva.com/search/templates?q=%E3%82%A2%E3%83%97%E3%83%AA
+
+lintエラー修正
+`yarn run lint --fix`
