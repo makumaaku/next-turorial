@@ -21,7 +21,6 @@ export default function AppArea() {
 
 const H2 = styled.h2`
   text-align: center;
-  text-decoration: underline black;
 `;
 
 const List = styled.ul`

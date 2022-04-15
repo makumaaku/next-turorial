@@ -10,7 +10,7 @@ export default function BlogArea({
   allPostsData: PostData[];
   isPost: boolean;
 }) {
-  const title = isPost ? "BLOG" : "プライバシーポリシー";
+  const title = isPost ? "ブログ" : "プライバシーポリシー";
   return (
     <div>
       <H2>{title}</H2>
@@ -33,7 +33,6 @@ export default function BlogArea({
 
 const H2 = styled.h2`
   text-align: center;
-  text-decoration: underline black;
 `;
 
 const List = styled.ul`

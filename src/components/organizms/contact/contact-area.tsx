@@ -77,7 +77,6 @@ const Container = styled.div`
 
 const H2 = styled.h2`
   text-align: center;
-  text-decoration: underline black;
 `;
 
 const FormWrapper = styled.div`
