@@ -63,8 +63,17 @@ export default function ContactArea() {
           <SubmitBtn type="submit">送信</SubmitBtn>
         </ButtonWrapper>
       </form>
+      <ButtonWrapper>
+        <SubmitBtn onClick={makeMd}>送信</SubmitBtn>
+      </ButtonWrapper>
     </Container>
   );
+}
+
+async function makeMd() {
+  const url = "/api/make-md";
+  const res = await fetch(url);
+  console.log(await res.json());
 }
 
 const Container = styled.div`
