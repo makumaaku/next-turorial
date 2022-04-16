@@ -28,6 +28,8 @@ export default function createPost(
   const metadata = blogMetadata({ dateString, title, imageUrl, tag });
   const markdown = req.body.markdown as string;
   const postString = metadata + "\n\n" + markdown;
+  console.log("title");
+  console.log(title);
   if (markdown === undefined || title === undefined) {
     return res.status(400).json({ status: "Bad request" });
   } else {

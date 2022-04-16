@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Layout from "../../src/components/layout";
 import ProfileImage from "../../src/components/molecules/image/profileImage";
 
@@ -13,6 +14,24 @@ export default function Profile() {
       <ProfileImage />
       <p>Maaku Saito</p>
       <p>Flutterでアプリ開発をしています</p>
+      <Image
+        alt="Mountains"
+        src="/images/profile.jpg"
+        height={300}
+        width={300}
+        // layout="fill"
+        // objectFit="fill"
+        quality={100}
+      />
+      <Image
+        alt="Mountains2"
+        src="/blog1.webp"
+        height={300}
+        width={300}
+        // layout="fill"
+        // objectFit="fill"
+        quality={100}
+      />
     </Layout>
   );
 }
