@@ -16,7 +16,7 @@ export default function Profile() {
       <p>Flutterでアプリ開発をしています</p>
       <Image
         alt="Mountains"
-        src="/images/profile.jpg"
+        src="/images/profile.JPG"
         height={300}
         width={300}
         // layout="fill"
