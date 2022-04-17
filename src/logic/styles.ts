@@ -2,6 +2,7 @@ import { base as preset } from "@theme-ui/presets";
 import { merge, useColorMode, Theme } from "theme-ui";
 import { useCallback } from "react";
 
+//全タグの初期設定を行う
 export const theme = merge(preset as Theme, {
   styles: {
     root: {
