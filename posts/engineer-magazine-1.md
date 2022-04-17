@@ -1,8 +1,8 @@
 ---
-title: 'エンジニアマガジン'
+title: 'エンジニアマガジン1'
 date: '2021-08-30'
-imageUrl: 'https://mark-saito-next-blog.s3.ap-northeast-1.amazonaws.com/blog/1-ios-simulator-failed.jpg'
-tag: 'フリーランスマガジン'
+imageUrl: 'https://mark-saito-next-blog.s3.ap-northeast-1.amazonaws.com/blog/engineer-magazine-1.jpg'
+tag: 'マガジン'
 
 ---
 
