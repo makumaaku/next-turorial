@@ -18,6 +18,12 @@ export default function PostPage() {
     makeMd(title.value, markdown);
   };
 
+  const handlePhotoChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    uploadPhoto(event.target);
+  };
+
   return (
     <Container>
       <H16SizedBox></H16SizedBox>
@@ -25,6 +31,14 @@ export default function PostPage() {
       <form onSubmit={handleSubmit}>
         <Column>
           <TitleField type="text" id="post-title" placeholder="Title" />
+          <H16SizedBox></H16SizedBox>
+          <input
+            id="photo-upload"
+            type="file"
+            accept="image/png, image/jpeg"
+            onChange={handlePhotoChange}
+            // multiple={true}
+          />
           <H16SizedBox></H16SizedBox>
           <Row>
             <InputField
@@ -48,9 +62,36 @@ export default function PostPage() {
   );
 }
 
+async function uploadPhoto(target: HTMLInputElement) {
+  const file = (target.files as FileList)[0];
+  if (file === undefined) return;
+  const filename = encodeURIComponent(file.name);
+  // 確認
+  console.log(filename);
+  // const res = await fetch(`/api/upload-image?file=${filename}`);
+  // const { url, fields }: { url: string, fields: Fields } = await res.json();
+  // console.log(url);
+  // console.log(fields);
+  // const formData = new FormData();
+
+  // Object.entries({ ...fields, file }).forEach(([key, value]) => {
+  //     formData.append(key, value);
+  // });
+
+  // const upload = await fetch(url, {
+  //     method: 'POST',
+  //     body: formData,
+  // });
+
+  // if (upload.ok) {
+  //     console.log('Uploaded successfully!');
+  // } else {
+  //     console.error('Upload failed.');
+  // }
+}
+
 async function makeMd(postTitle: string, markdown: string) {
   const url = "/api/create-post";
-  console.log("111111");
   await fetch(url, {
     method: "POST",
     headers: {
@@ -60,6 +101,28 @@ async function makeMd(postTitle: string, markdown: string) {
   });
   const res = await fetch(url);
   console.log(await res.json());
+}
+
+interface Fields {
+  /**
+   * A base64-encoded policy detailing what constitutes an acceptable POST
+   * upload. Composed of the conditions and expiration provided to
+   * s3.createPresignedPost
+   */
+  Policy: string;
+
+  /**
+   * A hex-encoded HMAC of the POST policy, signed with the credentials
+   * provided to the S3 client.
+   */
+  "X-Amz-Signature": string;
+
+  /**
+   * Additional keys that must be included in the form to be submitted. This
+   * will include signature metadata as well as any fields provided to
+   * s3.createPresignedPost
+   */
+  [key: string]: string;
 }
 
 const Container = styled.div`
