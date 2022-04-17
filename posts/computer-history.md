@@ -34,8 +34,9 @@ tag: '歴史'
 この辺りからコンピューターをエンドユーザーが直接操作できるようになってきたようですね。  
 ユーザーがシステムやアプリケーションを開発できるようになったり。  
 
-引用
-https://e-words.jp/w/EUC.html
+
+引用  
+[e-words](https://e-words.jp/w/EUC.html)
 
 ## ホームページ(Webページ)
 初期はhtmlファイルをFTP（File Transfer Protocol）ソフトを使ってサーバーにアップロードしていた。  
@@ -62,26 +63,23 @@ https://e-words.jp/w/EUC.html
 
 `誰もが簡単に使えるように`という流れは常にあるようです。  
 
-参考  
-https://www.tekwind.co.jp/column/entry_81.php?category=1&product_category=411&maker=NOWing
+[参考](https://www.tekwind.co.jp/column/entry_81.php?category=1&product_category=411&maker=NOWing)  
 
 ## プログラミング
 以前(現在)は、アプリケーションを作るには、ローカルで作ってサーバーにデプロイする。  
 最近はクラウド上で書いて、そのままクラウド上にアップロードする。みたいな。  
 
-クラウドIDE  
-https://yaseiblog.org/cloud-ides/
+[クラウドIDE](https://yaseiblog.org/cloud-ides/)  
 
 ## ノーコード
 もはや凝ったものでなければ、プログラミングの知識も必要なくなってきている。  
 
-.buble  
+[.buble](https://bubble.io/)  
 ノーコードでアプリケーション開発ができる  
-https://bubble.io/
 
-BASE  
+[BASE](https://thebase.in/)  
 ノーコードでECサイトが作れる  
-https://thebase.in/
+
 
 ## まとめ
 軽くまとめたように、全てにおいて`誰もが簡単に使えるように`という流れになっていると思います。  
