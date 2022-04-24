@@ -32,10 +32,6 @@ export default function Post({
     <Layout blog>
       <Head>
         <title>{postData.title}</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
-        ></link>
       </Head>
       <Row>
         <BlogContainer>
