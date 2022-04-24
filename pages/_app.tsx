@@ -5,7 +5,7 @@ import { ThemeProvider } from "theme-ui";
 import { theme } from "../src/logic/styles";
 import styled from "@emotion/styled";
 import "highlight.js/styles/github-gist.css";
-import {usePageView,GoogleAnalytics} from "src/lib/gtag";
+import { usePageView, GoogleAnalytics } from "src/lib/gtag";
 
 const siteTitle = "ファーストアップ";
 
