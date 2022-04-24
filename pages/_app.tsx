@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "theme-ui";
-import { theme,blogTheme } from "../src/logic/styles";
+import { theme, blogTheme } from "../src/logic/styles";
 import { useRouter } from "next/router";
 import "highlight.js/styles/github-gist.css";
 import { usePageView, GoogleAnalytics } from "src/lib/gtag";
@@ -27,11 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <GoogleAnalytics />
       </Head>
 
-      
-        <main>
-          <Component {...pageProps} />
-        </main>
-   
+      <main>
+        <Component {...pageProps} />
+      </main>
     </ThemeProvider>
   );
 }

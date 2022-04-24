@@ -52,12 +52,12 @@ export const blogTheme = merge(preset as Theme, {
         outline: "inherit",
       },
       li: {
-        listStyleType: 'none',
+        listStyleType: "none",
         position: "relative",
         paddingLeft: "1em",
         paddingBottom: 10,
         marginTop: 10,
-        lineHeight:1.8,
+        lineHeight: 1.8,
         "::before": {
           borderRadius: "50%",
           width: 10,
@@ -67,31 +67,31 @@ export const blogTheme = merge(preset as Theme, {
           left: -2,
           top: "0.6em",
           content: "''",
-          background: "#8ed2ff"
-        }
+          background: "#8ed2ff",
+        },
       },
       ul: {
         padding: "1em 1em",
         margin: "2em 2em",
         background: "#FFF",
         border: "solid 3px #8ed2ff",
-        borderRadius: 10,/*角の丸み*/
+        borderRadius: 10 /*角の丸み*/,
       },
       a: {
         color: "00ff00",
         textDecoration: "none",
       },
       strong: {
-        background: `linear-gradient(transparent 80%, #8ed2ff 0%)`
+        background: `linear-gradient(transparent 80%, #8ed2ff 0%)`,
       },
       p: {
         marginBlockStart: 4,
         marginBlockEnd: 4,
         fontSize: 18,
-        fontFamily: 'sans-serif',
+        fontFamily: "sans-serif",
         fontWeight: 300,
-        color: '#555555',
-        lineHeight: 2
+        color: "#555555",
+        lineHeight: 2,
       },
       main: {
         padding: 0,
@@ -115,8 +115,7 @@ export const blogTheme = merge(preset as Theme, {
         borderLeftWidth: 8,
         borderBottom: "solid",
         borderColor: "#8ed2ff",
-        borderWidth: 5
-
+        borderWidth: 5,
       },
       h4: {
         fontSize: 20,
