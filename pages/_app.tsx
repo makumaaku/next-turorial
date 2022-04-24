@@ -5,10 +5,13 @@ import { ThemeProvider } from "theme-ui";
 import { theme } from "../src/logic/styles";
 import styled from "@emotion/styled";
 import "highlight.js/styles/github-gist.css";
+import {usePageView,GoogleAnalytics} from "src/lib/gtag";
 
 const siteTitle = "ファーストアップ";
 
 export default function App({ Component, pageProps }: AppProps) {
+  usePageView();
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -17,6 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
           rel="icon"
           href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/mobile-phone_1f4f1.png"
         />
+        {/* Google Analytics */}
+        <GoogleAnalytics />
       </Head>
 
       <Container>

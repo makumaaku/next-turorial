@@ -14,3 +14,6 @@ https://www.canva.com/search/templates?q=%E3%82%A2%E3%83%97%E3%83%AA
 
 lintエラー修正
 `yarn run lint --fix`
+
+## Google Analyticsの導入
+https://panda-program.com/posts/nextjs-google-analytics
