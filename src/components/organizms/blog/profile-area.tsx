@@ -20,7 +20,7 @@ export default function ProfileArea() {
         </P4>
       </Row>
       <p>初めまして！ブログ初めてみました</p>
-      <ProfileButton onClick={() => router.push("/hp/profile")}>
+      <ProfileButton onClick={() => router.push("/profile")}>
         プロフィールはこちら
       </ProfileButton>
     </Container>

@@ -2,18 +2,21 @@ import React from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "theme-ui";
-import { theme } from "../src/logic/styles";
-import styled from "@emotion/styled";
+import { theme, blogTheme } from "../src/logic/styles";
+import { useRouter } from "next/router";
 import "highlight.js/styles/github-gist.css";
 import { usePageView, GoogleAnalytics } from "src/lib/gtag";
 
 const siteTitle = "ファーストアップ";
 
 export default function App({ Component, pageProps }: AppProps) {
-  usePageView();
+  const router = useRouter();
+  usePageView(router);
+  const isPost = router.route.includes("/posts/");
+  const siteTheme = isPost ? blogTheme : theme;
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={siteTheme}>
       <Head>
         <title>{siteTitle}</title>
         <link
@@ -24,17 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <GoogleAnalytics />
       </Head>
 
-      <Container>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </Container>
+      <main>
+        <Component {...pageProps} />
+      </main>
     </ThemeProvider>
   );
 }
-
-const Container = styled.div`
-  ··display: flex;
-  ··flex-direction: column;
-  ··align-items: center;
-`;

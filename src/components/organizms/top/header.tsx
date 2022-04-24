@@ -18,7 +18,7 @@ export default function Header() {
         </Link>
       </HeaderTitle>
       <HeaderItems>
-        <Link href="/hp/app-list">
+        <Link href="/apps/">
           <HeaderItem>アプリ一覧</HeaderItem>
         </Link>
         <Link href="/posts/">
@@ -27,7 +27,7 @@ export default function Header() {
         <Link href="/privacy-policy/">
           <HeaderItem>プライバシーポリシー</HeaderItem>
         </Link>
-        <Link href="/hp/contact-us">
+        <Link href="/contacts/">
           <HeaderItem>お問い合わせ</HeaderItem>
         </Link>
         {/* <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>
