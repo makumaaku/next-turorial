@@ -1,7 +1,7 @@
 //Google Analytics関連のものは、このファイルにまとめる
 import React, { useEffect } from "react";
-import { useRouter } from "next/router";
 import Script from "next/script";
+import { NextRouter } from "next/router";
 
 //Google AnalyticsのID
 export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || "";
@@ -30,9 +30,7 @@ export const event = ({ action, category, label }: Event) => {
 
 //RouterのURL書き換えが完了した時に発火するrouteChangeCompleteイベント
 //のコールバックとしてpageview関数を設定
-export function usePageView() {
-  const router = useRouter();
-
+export function usePageView(router: NextRouter) {
   useEffect(() => {
     if (!existsGaId) {
       return;

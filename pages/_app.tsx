@@ -3,6 +3,7 @@ import Head from "next/head";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "theme-ui";
 import { theme } from "../src/logic/styles";
+import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import "highlight.js/styles/github-gist.css";
 import { usePageView, GoogleAnalytics } from "src/lib/gtag";
@@ -10,7 +11,9 @@ import { usePageView, GoogleAnalytics } from "src/lib/gtag";
 const siteTitle = "ファーストアップ";
 
 export default function App({ Component, pageProps }: AppProps) {
-  usePageView();
+  const router = useRouter();
+  usePageView(router);
+  const isPost = router.route.includes("/posts/");
 
   return (
     <ThemeProvider theme={theme}>

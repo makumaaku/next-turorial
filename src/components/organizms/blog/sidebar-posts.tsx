@@ -52,7 +52,7 @@ const ListItem = styled.li`
   flex-direction: row;
   border-top: 1px solid #bbb;
 
-  &:nth-child(n + 2) {
+  &:nth-of-type(n + 2) {
     display: none;
   }
 `;
