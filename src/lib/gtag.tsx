@@ -1,6 +1,5 @@
 //Google Analytics関連のものは、このファイルにまとめる
 import React, { useEffect } from "react";
-import Script from "next/script";
 import { NextRouter } from "next/router";
 
 //Google AnalyticsのID
@@ -55,10 +54,9 @@ export function GoogleAnalytics() {
         <>
           {/* Google Analytics の JS をサイトの実行に必要なスクリプトを読み込んでページがインタラクティブになった後に読み込む(For SEO) */}
           {/* strategy="afterInteractive" */}
-          <Script
-            defer
+          <script
+            async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
           />
           {/* Scriptを使うと、gtagがundefinedになってしまう.. */}
           <script
