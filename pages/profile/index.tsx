@@ -15,11 +15,11 @@ export default function Profile() {
       <p>Maaku Saito</p>
       <p>Flutterでアプリ開発をしています</p>
       <Image
-        alt="Mountains"
+        alt="プロフィール画像"
         src="/images/profile.JPG"
         height={300}
         width={300}
-        // layout="fill"
+        layout="fill"
         // objectFit="fill"
         quality={100}
       />

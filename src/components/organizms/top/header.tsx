@@ -18,16 +18,16 @@ export default function Header() {
         </Link>
       </HeaderTitle>
       <HeaderItems>
-        <Link href="/apps/">
+        <Link href="/apps">
           <HeaderItem>アプリ一覧</HeaderItem>
         </Link>
-        <Link href="/posts/">
+        <Link href="/posts">
           <HeaderItem>ブログ</HeaderItem>
         </Link>
-        <Link href="/privacy-policy/">
+        <Link href="/privacy-policy">
           <HeaderItem>プライバシーポリシー</HeaderItem>
         </Link>
-        <Link href="/contacts/">
+        <Link href="/contacts">
           <HeaderItem>お問い合わせ</HeaderItem>
         </Link>
         {/* <IconButton aria-label="Toggle Dark Mode" onClick={toggleColorMode}>

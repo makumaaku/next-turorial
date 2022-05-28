@@ -18,6 +18,7 @@ export default function AppCard({
         <Link href={linkUrl}>
           <a>
             <Image
+              alt={appName}
               priority
               layout="fixed"
               src={imageUrl}
