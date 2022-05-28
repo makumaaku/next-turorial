@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config sitemap.config.js",
     "start": "next start",
     "lint": "eslint . --ext .js,.ts,.tsx"
   },
@@ -45,6 +46,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
+    "next-sitemap": "^2.5.26",
     "prettier": "^2.2.1",
     "typescript": "^4.7.2"
   }
