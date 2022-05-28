@@ -17,3 +17,4 @@ lintエラー修正
 
 ## Google Analyticsの導入
 https://panda-program.com/posts/nextjs-google-analytics
+https://github.com/KushibikiMashu/my-tech-blog/issues/4
