@@ -38,7 +38,13 @@ export default function Post({
           <BlogTag tag={postData.tag} />
         </Row>
         <H16></H16>
-        <Image priority src={postData.imageUrl} height={400} width={800} />
+        <Image
+          priority
+          alt={postData.title}
+          src={postData.imageUrl}
+          height={400}
+          width={400}
+        />
         <GithubMarkdown>
           <div
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}

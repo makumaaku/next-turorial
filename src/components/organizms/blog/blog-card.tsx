@@ -24,6 +24,7 @@ export default function BlogCard({
         <Link href={pass}>
           <a>
             <Image
+              alt={title}
               priority
               src={imageUrl}
               height={cardImageHeight}
