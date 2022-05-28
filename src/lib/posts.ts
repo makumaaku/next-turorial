@@ -5,6 +5,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import slug from 'remark-slug';
 import toc from 'remark-toc';
+import externalLink from 'remark-external-links'
 import highlight from "remark-highlight.js";
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -103,6 +104,7 @@ export async function getPostData(id: string, isPost = true) {
     .use(slug)
     .use(toc, { heading: '目次', maxDepth: 2 })
     .use(html)
+    .use(externalLink, { target: "_blank" })
     .use(highlight)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
