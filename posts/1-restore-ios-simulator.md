@@ -6,6 +6,8 @@ tag: 'Xcode'
 
 ---
 
+## 目次
+
 ## iOS DeviceSupportを削除したら[Unable to boot device because it cannot be located on disk.]
 
 [DaisyDisk](https://daisydiskapp.com/)でUser/user名/ライブラリ/Develop/iOS DeviceSupport を削除してしまったら、iosシミュレーターが動かなくなってしまいました。
