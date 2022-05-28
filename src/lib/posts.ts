@@ -3,6 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import slug from 'remark-slug';
+import toc from 'remark-toc';
 import highlight from "remark-highlight.js";
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -98,6 +100,8 @@ export async function getPostData(id: string, isPost = true) {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
+    .use(slug)
+    .use(toc, { heading: '目次', maxDepth: 2 })
     .use(html)
     .use(highlight)
     .process(matterResult.content);
