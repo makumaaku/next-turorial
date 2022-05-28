@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../src/components/layout";
 import ProfileImage from "../../src/components/molecules/image/profileImage";
-import mountains from '../../public/images/profile.jpg'
+import mountains from "../../public/images/profile.jpg";
 
 export default function Profile() {
   return (
