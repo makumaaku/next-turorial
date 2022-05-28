@@ -16,20 +16,19 @@ export default function App({ Component, pageProps }: AppProps) {
   const siteTheme = isPost ? blogTheme : theme;
 
   return (
-    <ThemeProvider theme={siteTheme}>
-      <Head>
-        <title>{siteTitle}</title>
-        <link
-          rel="icon"
-          href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/mobile-phone_1f4f1.png"
-        />
-        {/* Google Analytics */}
+    <>
+      <ThemeProvider theme={siteTheme}>
+        <Head>
+          <title>{siteTitle}</title>
+          <link
+            rel="icon"
+            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/mobile-phone_1f4f1.png"
+          />
+        </Head>
         <GoogleAnalytics />
-      </Head>
 
-      <main>
         <Component {...pageProps} />
-      </main>
-    </ThemeProvider>
+      </ThemeProvider>
+    </>
   );
 }
